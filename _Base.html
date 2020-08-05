@@ -1,0 +1,43 @@
+[(#CACHE{0})]
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Basic App Page</title>
+#INSERT_HEAD_CSS
+#INSERT_HEAD
+
+	<style>
+		#main_container{
+			min-width : 0px;
+			min-height : 0px;
+			display: flex;
+			flex : 1 1 0;
+			justify-content : space-evenly;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="header">
+		
+	</div>
+	<div id="page">
+		#INCLURE{fond=main_container}
+	</div>
+	<script type="text/javascript">
+	var applicationNamespace = {}, appNameObj;
+	// Call stack empty-ing pattern (preload is a long cascade of events)
+	(new Promise(function(resolve, reject) {
+		window.addEventListener('DOMContentLoaded', function() {
+			preload.afterComplete = resolve;
+		});
+	})).then(function() {
+		"use strict";
+		appNameObj = appName(applicationNamespace).create();
+		appNameObj.init('main_container');
+	});
+	</script>
+	#INCLURE{fond=hiddens}
+</body>
+</html>
