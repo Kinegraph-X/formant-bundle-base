@@ -1,6 +1,6 @@
 
 module.exports = function(grunt, options) {
-	console.log(options);
+//	console.log(options);
 	return {
 		debug: {
 			files: {
@@ -22,7 +22,7 @@ module.exports = function(grunt, options) {
 				],
 				transform: [
 					'stringify',
-					['cssify-to-json', {pathToProject : '<%=pathToProject%>'}],
+					['cssify-to-json-class-index', {pathToProject : '<%=pathToProject%>'}],
 					['browserify-replace', {
 							replace: [
 								{from: /%%UIpackage%%/, to: options.UIpackage}
@@ -51,7 +51,7 @@ module.exports = function(grunt, options) {
 				],
 				transform: [
 					'stringify',
-					['cssify-to-json', {pathToProject : '<%=pathToProject%>'}],
+					['cssify-to-json-class-index', {pathToProject : '<%=pathToProject%>'}],
 					['browserify-replace', {
 							replace: [
 								{from: /%%UIpackage%%/, to: options.UIpackage}
