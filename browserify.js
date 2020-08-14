@@ -15,14 +15,14 @@ module.exports = function(grunt, options) {
 					browserifyInstance.require(grunt.config.data.UIPackageList);
 				},
 				preBundleCB : function(browserifyInstance) {
-
+					// php-cgi -f test_servers/_media_play_01/_enhanced/spip.php page=RegistrationForm
 				},
 				plugin: [
 					'browserify-derequire'
 				],
 				transform: [
 					'stringify',
-					['cssify-to-json-class-index', {pathToProject : '<%=pathToProject%>'}],
+					['cssify-to-json-class-index', {pathToProject : '<%=pathToProject%>', compilerRoot : '<%=compilerRoot%>', compilerCommand : '<%=compilerCommand%>'}],
 					['browserify-replace', {
 							replace: [
 								{from: /%%UIpackage%%/, to: options.UIpackage}
@@ -51,7 +51,7 @@ module.exports = function(grunt, options) {
 				],
 				transform: [
 					'stringify',
-					['cssify-to-json-class-index', {pathToProject : '<%=pathToProject%>'}],
+					['cssify-to-json-class-index', {pathToProject : '<%=pathToProject%>', compilerRoot : '<%=compilerRoot%>', compilerCommand : '<%=compilerCommand%>'}],
 					['browserify-replace', {
 							replace: [
 								{from: /%%UIpackage%%/, to: options.UIpackage}

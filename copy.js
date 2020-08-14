@@ -46,6 +46,20 @@ module.exports = function (grunt, options) {
 							return true;
 						return false;
 					}
+				},
+				{
+					expand: true,
+					cwd: '_Spip_as_A_Compiler/plugins/_spip_baseApp/',
+					src: [
+						'css/*.xml',
+						'*.css.html'
+						],
+					dest: '<%=localDeployPath%>spip_baseApp/',
+					filter: function() {
+						if (grunt.file.isDir(options.localDeployPath + '_spip_baseApp'))
+							return true;
+						return false;
+					}
 				}
 			]
 		}
