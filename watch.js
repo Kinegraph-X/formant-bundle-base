@@ -8,11 +8,12 @@ module.exports = function(grunt, options) {
 				'plugins_spip/spip_baseAPP/**/*.html',
 				'plugins_spip/spip_baseAPP/**/*.css',
 				'plugins_spip/_Bundles/**/*.html',
-				'plugins_spip/_Spip_as_A_Compiler/plugins/_spip_baseApp/css/*.xml',
-				'plugins_spip/_Spip_as_A_Compiler/plugins/_spip_baseApp/*.css.html'
+				'_Spip_as_A_Compiler/plugins/spip_baseApp/css/*.xml',
+				'_Spip_as_A_Compiler/plugins/spip_baseApp/*.css.html',
+				'_Spip_as_A_Compiler/plugins/spip_baseApp/css/*.shadowStyle.html'
 			],
 			filter : function(srcPath) {
-				if (srcPath.match(/debug\.js|dist\.js|jsComponents_css/))
+				if (srcPath.match(/debug\.js|dist\.js|jsComponents_css|cache/))
 					return false;
 				return true;
 			},

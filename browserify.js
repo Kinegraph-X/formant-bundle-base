@@ -13,6 +13,7 @@ module.exports = function(grunt, options) {
 				},
 				configure : function(browserifyInstance) {
 					browserifyInstance.require(grunt.config.data.UIPackageList);
+					browserifyInstance.require(grunt.config.data.UIvalidatorsList);
 				},
 				preBundleCB : function(browserifyInstance) {
 					// php-cgi -f test_servers/_media_play_01/_enhanced/spip.php page=RegistrationForm
