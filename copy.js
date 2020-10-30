@@ -11,7 +11,8 @@ module.exports = function (grunt, options) {
 						'js/<%=currentProject%>.debug.js', 'js/<%=currentProject%>.debug.js.map',
 						'js/<%=currentProject%>.dist.js', 'js/<%=currentProject%>.dist.js.map',
 						'**/*.html',
-						'**/*.xml'
+						'**/*.xml',
+						'**/*pipelines.php'
 						],
 					dest: '<%=localDeployPath%><%=currentProject%>',
 					filter: 'isFile'
