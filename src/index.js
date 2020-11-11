@@ -7,7 +7,7 @@ var init = require('src/appLauncher/appLauncher');
 	init.launch({
 		UIDPrefix : 'appName'
 	});
-	this.AppName = require('src/router/appNameRouter');
+	this.AppNameStarter = require('src/router/appNameRouter');
 }).call(window);
 
 //module.exports = appName;
