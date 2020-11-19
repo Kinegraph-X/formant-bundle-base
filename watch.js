@@ -8,6 +8,7 @@ module.exports = function(grunt, options) {
 				'plugins_spip/spip_baseAPP/**/*.html',
 				'plugins_spip/spip_baseAPP/**/*.css',
 				'plugins_spip/_Bundles/**/*.html',
+				'plugins_spip/_Bundles/*/cache/*.*',
 				'_Spip_as_A_Compiler/plugins/spip_baseApp/css/*.xml',
 				'_Spip_as_A_Compiler/plugins/spip_baseApp/*.css.html',
 				'_Spip_as_A_Compiler/plugins/spip_baseApp/css/*.shadowStyle.html'

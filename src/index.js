@@ -1,4 +1,6 @@
 var init = require('src/appLauncher/appLauncher');
+var rDataset = require('src/core/ReactiveDataset');
+var cSet = require('src/core/ComponentSet');
 
 (function () {
 	this.factoryGlobalContext = this.factoryGlobalContext || {};

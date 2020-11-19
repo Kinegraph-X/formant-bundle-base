@@ -17,7 +17,7 @@
 	<necessite nom="preloadJS" compatibilite="[0.1.0;]" />
 
 	<pipeline nom="insert_head" inclure="_Base_pipelines.php" />
-	<!-- <pipeline nom="insert_head_css" inclure="_Base_pipelines.php" /> -->
+	<pipeline nom="insert_head_css" inclure="_Base_pipelines.php" />
 	<!-- <pipeline nom="header_prive" inclure="_Base_pipelines.php" /> -->
 
 </paquet>
