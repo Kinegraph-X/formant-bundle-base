@@ -32,7 +32,7 @@ module.exports = function(grunt, options) {
 					next(err, modifiedSrc);
 				},
 				plugin: [
-					'browserify-derequire'
+					'dep-case-verify', 'browserify-derequire'
 				],
 				transform: [
 					'stringify',
@@ -72,7 +72,7 @@ module.exports = function(grunt, options) {
 					next(err, modifiedSrc);
 				},
 				plugin: [
-					'browserify-derequire', 'bundle-collapser/plugin'
+					'dep-case-verify', 'browserify-derequire', 'bundle-collapser/plugin'
 				],
 				transform: [
 					'stringify',
