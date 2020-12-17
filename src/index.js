@@ -1,7 +1,7 @@
 var init = require('src/appLauncher/appLauncher');
 var App = require('src/appLauncher/dependancyInjector');
 var TypeManager = require('src/core/TypeManager');
-//var CSSManagementAPI = require('src/_buildTools/CSSManagementAPI');
+//var CSSManagementComponent = require('src/_buildTools/CSSManagementComponent');
 
 (function () {
 	// unique instance of appConstants will be initialized here, and used anywhere the instance is "got" (via getInstance() ) with globalContext as context
@@ -13,7 +13,7 @@ var TypeManager = require('src/core/TypeManager');
 		console.warn('CSS Management API Started');
 		
 		var viewsObserver = new CoreTypes.debouncerObservable('viewsObserver');
-		viewsObserver.subscribe(CSSManagementAPI.traversePage.bind(CSSManagementAPI));
+		viewsObserver.subscribe(CSSManagementComponent.traversePage.bind(CSSManagementComponent));
 		// viewsObserver should have
 		//						a special set() method to:
 		// 	=> stack the received value on itself
@@ -36,7 +36,7 @@ var TypeManager = require('src/core/TypeManager');
 		//};
 		// This would allow us to choose when the CSS is treated.
 		viewsObserver.reflect(0, TypeManager.viewsRegister.cache);
-		CSSManagementAPI.setStartingPoint('MP4ParserStarter', this);
+		CSSManagementComponent.setStartingPoint('MP4ParserStarter', this);
 	}
 	
 	this.AppNameStarter = require('src/router/appNameRouter');
