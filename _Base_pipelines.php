@@ -29,7 +29,7 @@ function _Base_insert_head($flux) {
 	// https://www.php.net/ (même url que ci-dessus)
 	// $_SERVER['HTTP_HOST'] : Contenu de l'en-tête Host: de la requête courante, si elle existe
 	if (strpos($_SERVER['SERVER_NAME'], 'localhost') !== false) {
-		$flux .= '<script type="text/javascript" src="http://'.$_SERVER['SERVER_NAME'].':35729/livereload.js"></script>
+		$flux .= '<script type="text/javascript" async="true" src="http://'.$_SERVER['SERVER_NAME'].':35729/livereload.js"></script>
 		';
 	}
 	if (!$js_bundle = find_in_path('js/_Base.dist.js')) {
