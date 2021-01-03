@@ -36,7 +36,7 @@ module.exports = function(grunt, options) {
 				],
 				transform: [
 					'stringify',
-					['cssify-to-json-class-index', {pathToProject : '<%=pathToProject%>', compilerRoot : '<%=compilerRoot%>', compilerCommand : '<%=compilerCommand%>'}],
+					['cssify-from-db', {pathToProject : '<%=pathToProject%>'}],
 					['browserify-replace', {
 							replace: [
 								{from: /%%UIpackage%%/, to: options.UIpackage}
@@ -76,7 +76,7 @@ module.exports = function(grunt, options) {
 				],
 				transform: [
 					'stringify',
-					['cssify-to-json-class-index', {pathToProject : '<%=pathToProject%>', compilerRoot : '<%=compilerRoot%>', compilerCommand : '<%=compilerCommand%>'}],
+					['cssify-from-db', {pathToProject : '<%=pathToProject%>'}],
 					['browserify-replace', {
 							replace: [
 								{from: /%%UIpackage%%/, to: options.UIpackage}
