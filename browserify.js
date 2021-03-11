@@ -1,3 +1,4 @@
+var fs = require('fs');
 
 module.exports = function(grunt, options) {
 //	console.log(options);
@@ -14,7 +15,8 @@ module.exports = function(grunt, options) {
 				configure : function(browserifyInstance) {
 					browserifyInstance.require(grunt.config.data.UIPackageList);
 					browserifyInstance.require(grunt.config.data.UIvalidatorsList);
-					browserifyInstance.require(['cache/stringifiedSources']);
+					if (fs.existsSync('cache/stringifiedSources.js'))
+						browserifyInstance.require(['cache/stringifiedSources']);
 				},
 				preBundleCB : function(browserifyInstance) {
 					// php-cgi -f test_servers/_media_play_01/_enhanced/spip.php page=RegistrationForm
