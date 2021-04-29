@@ -37,6 +37,7 @@ module.exports = function(grunt, options) {
 					'dep-case-verify', 'browserify-derequire'
 				],
 				transform: [
+					'strictify',
 					'stringify',
 					['cssify-from-db', {pathToProject : '<%=pathToProject%>'}],
 					['browserify-replace', {

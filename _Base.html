@@ -21,6 +21,7 @@
 <body>
 
 	<script type="text/javascript">
+	"use strict";
 	var applicationNamespace = {}, appNameObj;
 	// Call stack empty-ing pattern (preload is a long cascade of events)
 	(new Promise(function(resolve, reject) {
@@ -28,7 +29,6 @@
 			preload.afterComplete = resolve;
 		});
 	})).then(function() {
-		"use strict";
 		appNameStarter().init('main_container');
 	});
 	</script>
