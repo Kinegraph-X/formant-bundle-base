@@ -49,7 +49,7 @@ module.exports = function(grunt, options) {
 						window.document = (typeof d8 !== 'undefined' && d8.dom) || {};
 					}
 					`.replace(/\t{5}/g, '');
-					modifiedSrc = nodeOrd8Polyfill + modifiedSrc;
+					modifiedSrc = modifiedSrc + nodeOrd8Polyfill;
 					
 					next(err, modifiedSrc);
 				},
