@@ -12,7 +12,6 @@
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
 function _Base_insert_head_css($flux) {
-	$flux .= '<link rel="stylesheet" href="plugins/_Base/css/prism_highlighter.css">';
 	return $flux;
 }
 

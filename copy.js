@@ -1,6 +1,5 @@
 module.exports = function (grunt, options) {
 	
-	
 	return {
 		localRelease: {
 			files : [
@@ -13,7 +12,7 @@ module.exports = function (grunt, options) {
 						'**/*.html',
 						'**/*.xml',
 						'**/*pipelines.php',
-						'css/prism_highlighter.css'
+//						'css/prism_highlighter.css'
 						],
 					dest: '<%=localDeployPath%><%=currentProject%>',
 					filter: 'isFile'
